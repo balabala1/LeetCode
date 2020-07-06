@@ -1,2 +1,2 @@
-# LeetCode
-LeetCode真题练习
+# EA-WGCN
+LeetCode
