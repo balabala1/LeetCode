@@ -14,23 +14,23 @@ We evaluate the performance of our model on TACRED and SemEval 2010 Task 8 datas
 First, since the pre-training GLoVe vectors is applied, you need to download from the Stanford NLP group website (https://nlp.stanford.edu/projects/glove/) and unzip it to the directory 
 dataset/glove. <\br>
 Then prepare vocabulary and initial word vectors with: <\br>
+'<python3 prepare_vocab.py dataset/tacred dataset/vocab dataset/glove>'
 
-python3 prepare_vocab.py dataset/tacred dataset/vocab dataset/glove
 The vocabulary and word vectors can be saved under this directory dataset/vocab.
 
 ## Training
 To train a EA-WGCN model, run:
-python3 train.py 
+'<python3 train.py>' 
 Model checkpoints and logs will be saved to ./saved_models. For details on the use of other parameters, please refer to train.py.
 ## Evaluation
 To run evaluation on the test set, run:
-python3 evaluate.py --model_dir saved_models/best_model 
+'<python3 evaluate.py --model_dir saved_models/best_model >'
 
 ## Ensemble
 To run an ensemble model, run:
-python3 ensemble.py
+'<python3 ensemble.py>'
 
-#Citation
+# Citation
 @inproceedings{????,
  author = { Li Zhou and Tingyu Wang and Hong Qu and Li Huang and Yuguo Liu },
  booktitle = {Proc. of ECAI},
