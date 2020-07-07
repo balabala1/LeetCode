@@ -35,11 +35,21 @@ To run evaluation on the test set, run:
 ```
 python3 evaluate.py --model_dir saved_models/best_model
 ```
+This will use the `best_model.pt` file to evaluate the model by default.
 ## Ensemble
 To run an ensemble model, run:
 ```
 python3 ensemble.py
 ```
+You need to specify the parameter `model_file_list` in the `ensemble.py` as shown in the following example:
+```
+model_file_list = ['saved_models/01',
+                   'saved_models/02',
+                   'saved_models/03',
+                   'saved_models/04',
+                   'saved_models/05']                 
+```
+Store the trained model files under the all `saved_models/XX`.
 # Citation
 ```
 @inproceedings{zhou2020eawgcn,
